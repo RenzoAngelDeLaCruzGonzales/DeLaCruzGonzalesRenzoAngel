@@ -1,0 +1,250 @@
+---
+title: "TAREA 02 PROGRAMACION"
+author: "De La Cruz, Luque & Garcia"
+date: "24/11/2021"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## EJERCICIOS
+### 1
+```{r}
+10000%%3
+```
+### 2
+```{r}
+0 == (4560%%3)
+```
+### 3
+```{r}
+numeros_enteros <- c(2:87)
+divisibles_7 <- (0 == numeros_enteros%%7)
+which(divisibles_7 == TRUE)
+numeros_enteros[c(6,13,20,27,34,41,48,55,62,69,76,83)]
+```
+### 4
+```{r}
+primer_vector <- c(seq(7,3,-1))
+segundo_vector <- c(head(seq(0,100,5),5))
+```
+#### 4a
+```{r}
+A <- (0 == primer_vector%%2)
+which(A == TRUE)
+primer_vector [c(2,4)]
+```
+#### 4b
+```{r}
+B <- which(segundo_vector >10)
+segundo_vector [c(4,5)]
+```
+#### 4c
+```{r}
+for (i in 1:5) {
+  for (j in 1:5){
+    if(i==j)
+    {if(primer_vector[i]==segundo_vector[j]){
+      print(i)
+    }
+      
+    }
+  }
+}
+print("no hay datos")
+```
+### 5
+```{r}
+Gauss <- function(a) {
+  r1 <- (a*(a+1))/2
+  return(r1)
+} 
+Gauss(a = 100)
+```
+### 6
+```{r}
+k <- c(1,-4,5,9,-4)
+min(k)
+which(k==-4)
+```
+### 7
+```{r}
+factorial(8)
+```
+### 8
+```{r}
+sumatoria1 <- function(i){
+  exp(i)
+}
+sumatoria1(3:7)
+sum(sumatoria1(3:7))
+```
+### 9
+```{r}
+mifuncion <- function(i){
+  log10(sqrt(i))
+}
+a <- mifuncion(1:10)
+prod(a)
+```
+### 10
+```{r}
+Areacorona <- function(x,y){
+  ((x)^2)/2*(y-sin(y))
+}
+Areacorona(4,pi/4)
+```
+### 11
+```{r}
+vector_11 <- c(1:10)
+sort(vector_11,decreasing = T)
+rev(vector_11)
+```
+### 12
+```{r}
+g <- 10:100
+h <- g^3
+i <- g^2
+sum(h) + sum(4*i)
+```
+### 13
+```{r}
+a <- 1:25
+b <- (2^a)/a
+c <- (3^a)/a^2
+sum(b) + sum(c)
+```
+### 14
+```{r}
+dataset <- read.delim("https://raw.githubusercontent.com/fhernanb/datos/master/Paises.txt")
+length(dataset)
+```
+#### 14a
+```{r}
+dataset$Pais
+length(dataset$Pais)
+```
+#### 14b
+```{r}
+dataset$Pais
+length(dataset$Pais)
+```
+#### 14c
+```{r}
+dataset$Pais[which.max(dataset$poblacion)]
+```
+#### 14d
+```{r}
+dataset$Pais [which.min(dataset$alfabetizacion)]
+```
+### 15
+#### help("mtcars")
+#### 15a
+```{r}
+row.names(mtcars)[which(mtcars$mpg <18)]
+```
+#### 15b
+```{r}
+row.names(mtcars)[which(mtcars$cyl == 4)]
+```
+#### 15c
+```{r}
+row.names(mtcars)[which(mtcars$wt >2,5 & mtcars$am =="1")]
+```
+### 16
+```{r}
+x <- 0:365
+y <- 2*3.14*(x-81)/365
+
+Funcion01 <- function(y) {
+  x <- 9.87 *2 *sin(y)*cos(y)-7.53 * cos(y) -1.5* sin(y)
+  return(x)
+}
+Funcion01(y)
+x <-seq(as.Date("2021-01-01"), as.Date("2022-01-01"), "day")
+
+plot(x, Funcion01(y), ylab = "Minutos", xlab = "Meses", col ="red", type = "l", lwd = 3, lty = 2)
+mtext("Mathematical Astronomy Morsels, Jean Meeus. 1997", side = 3, adj = 0)
+title("Ecuación del tiempo",
+      adj = 0.000001,
+      line = 1.5)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
