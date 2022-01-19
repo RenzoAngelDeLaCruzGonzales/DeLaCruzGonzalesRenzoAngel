@@ -1,6 +1,6 @@
 EJERCICIOS TIDYVERSE
 ================
-De La Cruz, Renzo y Garcia, Harold
+De La Cruz, Renzo, Garcia, Harold y Luque, Camila
 12/1/2022
 
 ## Cargamos
@@ -1404,15 +1404,15 @@ tibble(x = runif(9),
     ## # Groups:   group [3]
     ##       x group
     ##   <dbl> <chr>
-    ## 1 0.205 b    
-    ## 2 0.288 c    
-    ## 3 0.350 b    
-    ## 4 0.485 c    
-    ## 5 0.673 a    
-    ## 6 0.735 a    
-    ## 7 0.753 b    
-    ## 8 0.754 a    
-    ## 9 0.917 c
+    ## 1 0.158 a    
+    ## 2 0.358 b    
+    ## 3 0.534 c    
+    ## 4 0.787 b    
+    ## 5 0.842 b    
+    ## 6 0.843 c    
+    ## 7 0.849 a    
+    ## 8 0.945 a    
+    ## 9 0.966 c
 
 ``` r
 tibble(group = rep(c("a", "b", "c"), each = 3), 
@@ -1424,17 +1424,17 @@ tibble(group = rep(c("a", "b", "c"), each = 3),
 
     ## # A tibble: 9 x 3
     ## # Groups:   group [3]
-    ##   group     x  lag_x
-    ##   <chr> <dbl>  <dbl>
-    ## 1 a     0.120 NA    
-    ## 2 c     0.131 NA    
-    ## 3 c     0.376  0.131
-    ## 4 b     0.436 NA    
-    ## 5 a     0.532  0.120
-    ## 6 b     0.575  0.436
-    ## 7 c     0.620  0.376
-    ## 8 a     0.804  0.532
-    ## 9 b     0.880  0.575
+    ##   group       x    lag_x
+    ##   <chr>   <dbl>    <dbl>
+    ## 1 c     0.00987 NA      
+    ## 2 a     0.0725  NA      
+    ## 3 b     0.121   NA      
+    ## 4 a     0.147    0.0725 
+    ## 5 c     0.341    0.00987
+    ## 6 c     0.685    0.341  
+    ## 7 a     0.743    0.147  
+    ## 8 b     0.793    0.121  
+    ## 9 b     0.982    0.793
 
 ### 2. ¿Qué avión (codigo_cola) tiene el peor registro de tiempo?
 
